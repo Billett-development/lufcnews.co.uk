@@ -44,7 +44,6 @@
     
     &__content {
 
-        background-color: $primary-blue;
         position: relative;
         border-radius: 1rem;
         background-color: $color-white;
@@ -56,7 +55,8 @@
 
             display: flex;
             justify-content: space-between;
-            background-color: $primary-yellow;
+            align-items: center;
+            background-color: $primary-blue;
             height: 7vh;
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
@@ -66,31 +66,27 @@
                 font-size: 2.3rem;
                 text-transform: uppercase;
                 padding: 2rem;
+                color: $color-white;
             }
 
             span {
 
-                border-left: $border-1px;
+                
                 padding: 1.8rem;
                 font-size: 2rem;
-                color: black;
+                color: $color-white;
 
+            }
+            
+            & span:nth-child(2) {
+                border-left: 1px solid $primary-yellow;
+            }
+
+            & span:nth-child(1) {
+                border-right: 1px solid $primary-yellow;
             }
 
         }
-
-    //     &:nth-child(even) span {
-    //         height: 20vh;
-    //         font-size: 10rem;
-    //     }
-
-        
-    //     &-head:nth-child(even) {
-
-    //         height: 20vh;
-        
-    // }
-
 
         &-info {
 
@@ -102,11 +98,7 @@
             
             display: flex;
             justify-content: center;
-            margin: 1rem;
-            width: 95%;
-            height: 95%;
-            border: $border-1px;
-            border-radius: $border-radius;
+            margin: auto;
 
             img {
                 padding: 2rem;
@@ -148,7 +140,7 @@
             left: 26px;
             border: medium solid  $primary-blue;
             border-width: 13px 13px 13px 0;
-            border-color: transparent  $color-white transparent transparent;
+            border-color: transparent  $primary-blue transparent transparent;
         }
 
         &::after { // make sure the circle is on the timeline

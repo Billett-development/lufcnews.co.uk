@@ -1176,6 +1176,8 @@ ion-icon {
       display: flex;
       flex-direction: column;
       height: 180vh; } }
+  .products__items > div {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
   .products__items-1 {
     flex: 0 0 25%;
     border-radius: 4px;
@@ -1556,7 +1558,6 @@ ion-icon {
       border-radius: 50%;
       z-index: 1; }
   .timeline__content {
-    background-color: #02427C;
     position: relative;
     border-radius: 1rem;
     background-color: #fff;
@@ -1566,7 +1567,8 @@ ion-icon {
     .timeline__content-head {
       display: flex;
       justify-content: space-between;
-      background-color: #F2CC61;
+      align-items: center;
+      background-color: #02427C;
       height: 7vh;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
@@ -1574,12 +1576,16 @@ ion-icon {
       .timeline__content-head h5 {
         font-size: 2.3rem;
         text-transform: uppercase;
-        padding: 2rem; }
+        padding: 2rem;
+        color: #fff; }
       .timeline__content-head span {
-        border-left: 1px solid #02427C;
         padding: 1.8rem;
         font-size: 2rem;
-        color: black; }
+        color: #fff; }
+      .timeline__content-head span:nth-child(2) {
+        border-left: 1px solid #F2CC61; }
+      .timeline__content-head span:nth-child(1) {
+        border-right: 1px solid #F2CC61; }
     .timeline__content-info {
       padding: 1rem;
       font-size: 1.7rem;
@@ -1587,11 +1593,7 @@ ion-icon {
     .timeline__content-img {
       display: flex;
       justify-content: center;
-      margin: 1rem;
-      width: 95%;
-      height: 95%;
-      border: 1px solid #02427C;
-      border-radius: 4px; }
+      margin: auto; }
       .timeline__content-img img {
         padding: 2rem;
         width: 100%;
@@ -1624,7 +1626,7 @@ ion-icon {
       left: 26px;
       border: medium solid #02427C;
       border-width: 13px 13px 13px 0;
-      border-color: transparent #fff transparent transparent; }
+      border-color: transparent #02427C transparent transparent; }
     .timeline__right::after {
       left: -13px; }
 
@@ -1676,8 +1678,7 @@ ion-icon {
     transform: scale(0.95); }
 
 .live {
-  padding-top: 10rem;
-  background-color: #F7F7F7; }
+  padding-top: 10rem; }
   .live__score {
     margin: 0 auto;
     width: 70%;
@@ -1746,6 +1747,51 @@ ion-icon {
         width: 20px;
         margin: -3px; }
 
+.fixture {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(180, 179, 179, 0.7);
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: space-between; }
+  .fixture__teams {
+    width: 80%;
+    padding: 2rem;
+    border-right: 1px solid rgba(180, 179, 179, 0.288);
+    font-size: 3rem; }
+    .fixture__teams-home {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding: 1rem; }
+      .fixture__teams-home img {
+        width: 30px;
+        margin-right: 2.5rem; }
+      .fixture__teams-home div {
+        display: flex;
+        align-content: center; }
+    .fixture__teams-away {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem; }
+      .fixture__teams-away img {
+        width: 30px;
+        margin-right: 2.5rem; }
+      .fixture__teams-away div {
+        display: flex;
+        align-content: center; }
+  .fixture__result {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; }
+    .fixture__result div:first-child {
+      font-weight: 500;
+      font-size: 3rem; }
+
 .section-hero {
   position: relative;
   margin-bottom: 8rem; }
@@ -1788,3 +1834,9 @@ ion-icon {
   margin-top: 8rem;
   margin-bottom: 8rem;
   background-color: #F7F7F7; }
+
+.section-fixtures {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  background-color: #F7F7F7;
+  padding-top: 10rem; }
